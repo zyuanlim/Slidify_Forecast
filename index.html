@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shiny Forecast Tool</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Shiny Forecast Tool">
+  <meta name="author" content="Zane Lim">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Shiny Forecast Tool</h1>
+    <h2>Interactive time-series and forecasting tool</h2>
+    <p>Zane Lim<br/>Analytics Consultant</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Shiny App for Forecasting</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Four features:</p>
+
+<ol>
+<li>Data: Selecting dataset from fpp R package/Uploading own dataset in csv</li>
+<li>Exploratory Data Analysis: Exploratory data analysis and visualization</li>
+<li>Decomposition: Time-series decomposition and smoothing</li>
+<li>Forecasting</li>
+</ol>
+
+<p>Credits to fpp R package
+<code>install.packages(&#39;fpp&#39;)</code></p>
+
+<p>For more information, please refer to <a href="https://www.otexts.org/fpp">Forecasting: principles and practice</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Feature 1: Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Allows user to either select one of the four dataset:</p>
+
+<ol>
+<li>Monthly anti-diabetic drug sales in Australia from 1992 to 2008</li>
+<li>Quarterly expenditure on eating out in Australia</li>
+<li>Quarterly retail trade: Euro area</li>
+<li>USA Electricity monthly total net generation</li>
+</ol>
+
+<p>Or upload a csv file which contains a column/vector of time-series values, then specify the start year and frequency per year.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Feature 2: Exploratory Data Analysis</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Allows user to explore the time-series data via the following plot:</p>
+
+<ol>
+<li>Time plot: A line chart</li>
+<li>Seasonal plot: A line chart broken down by year</li>
+<li>Seasonal sub-series: A line chart broken down by season</li>
+<li>Autocorrelation lag plot: Scatter plots with different lagged values (up to 9)</li>
+<li>Autocorrelation function: A diagram which shows the autocorrelation coefficients (of different lagged values)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Feature 3 &amp; 4: Decomposition and Forecasting</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Decomposition allows user to pick the following decomposition or smoothing:</p>
+
+<ol>
+<li>Seasonal adjustment: Adjust for seasonal effect using STL</li>
+<li>Moving average: Smooth by moving average</li>
+<li>STL decomposition: Decompose time-series to trend, seasonal and remainder components</li>
+</ol>
+
+<p>Forecasting allows user to pick one of the two forecasting technique:</p>
+
+<ol>
+<li>ARIMA</li>
+<li>Exponential (Holt-Winters)</li>
+</ol>
+
+<p>For simplicity, the parameters for the method are automatically chosen.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Shiny App for Forecasting'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Feature 1: Data'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Feature 2: Exploratory Data Analysis'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Feature 3 &amp; 4: Decomposition and Forecasting'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
